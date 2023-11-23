@@ -19,16 +19,30 @@ html {
 body {
   background-color: var(--pomodoro);
   transition: background-color 1s ease;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins';
   user-select: none;
+}
+
+.nav-bar {
+  padding: 15px;
+  color: #fff;
+  display: inline-flexbox;
+}
+
+.nav-logo {
+  font-weight: bold;
+  padding-left: 10px;
+  font-size: 25px;
+
 }
 
 progress {
   border-radius: 2px;
   width: 100%;
-  height: 12px;
+  height: 70px;
   position: fixed;
   top: 0;
+  mix-blend-mode: difference;
 }
 
 progress::-webkit-progress-bar {
@@ -111,6 +125,7 @@ button {
   transition: color 0.5s ease-in-out 0s;
 }
 
+
 button:focus,
 button:active {
   outline: none;
@@ -124,8 +139,25 @@ button:active {
   outline: none;
 }
 
-.hidden {
-  display: none;
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  position: fixed;
+  color: #fff;
+}
+
+.footer-content {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #e8266a;
+}
+
+a:hover {
+  opacity: 70%;
 }
 
 @media screen and (max-width: 550px) {
