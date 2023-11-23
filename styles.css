@@ -7,19 +7,19 @@ html {
 *::after {
   box-sizing: inherit;
   margin: 0;
-  padding: 0;
+
 }
 
 :root {
-  --pomodoro: hsl(223, 25%, 40%);
-  --shortBreak: hsl(48, 23%, 40%);
-  --longBreak: hsl(105, 16%, 40%);
+  --pomodoro: #13031c;
+  --shortBreak: #13031c;
+  --longBreak: #13031c;
 }
 
 body {
   background-color: var(--pomodoro);
   transition: background-color 1s ease;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: 'Poppins', sans-serif;
   user-select: none;
 }
 
@@ -49,44 +49,60 @@ progress::-webkit-progress-value {
   text-align: center;
 }
 
+button {
+  font-family: 'Poppins';
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 .clock {
+  color: #fff;
   margin-top: 50px;
   margin-bottom: 30px;
   font-size: 15rem;
   line-height: 1;
   display: flex;
   align-items: center;
-  font-family: arial, sans-serif;
+  font-family: 'Poppins';
 }
 
 .mode-button {
   font-size: 16px;
-  height: 28px;
   cursor: pointer;
   box-shadow: none;
   font-weight: 300;
   color: #fff;
   border: 1px solid transparent;
   margin: 0px;
-  border-radius: 4px;
+  border-radius: 50px;
   padding: 2px 12px;
   background: none;
 }
 
 .mode-button.active {
-  border-color: #fff;
+  color: #fff;
+  background-color: #8400CC;
+  font-weight: bold;
+  padding: 10px 10px;
+  font-size: large;
+  -webkit-text-stroke: #13031c 0.5px;
 }
 
 .main-button {
   cursor: pointer;
-  box-shadow: rgb(235, 235, 235) 0px 6px 0px;
+  box-shadow: #8400CC 0px 6px 0px;
   font-size: 22px;
   height: 55px;
   text-transform: uppercase;
-  color: hsl(175, 26%, 41%);
+  color: #fff;
   font-weight: bold;
   width: 200px;
-  background-color: white;
+  background-color: #8400CC;
   border-width: initial;
   border-style: none;
   margin: 20px 0px 0px;
@@ -98,11 +114,13 @@ progress::-webkit-progress-value {
 button:focus,
 button:active {
   outline: none;
+
 }
 
 .main-button.active {
-  transform: translateY(6px);
-  box-shadow: none;
+  opacity: 80%;
+  border: solid 2px #8400CC;
+  box-shadow: #8400CC 0px 6px 0px;
   outline: none;
 }
 

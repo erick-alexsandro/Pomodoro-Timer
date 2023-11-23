@@ -8,10 +8,8 @@ const timer = {
 
 let interval;
 
-const buttonSound = new Audio('button-sound.mp3');
 const mainButton = document.getElementById('js-btn');
 mainButton.addEventListener('click', () => {
-    buttonSound.play();
     const { action } = mainButton.dataset;
     if (action === 'start') {
         startTimer();
@@ -70,7 +68,7 @@ function startTimer() {
 
             if (Notification.permission === 'granted') {
                 const text =
-                    timer.mode === 'pomodoro' ? 'Get back to work!' : 'Take a break!';
+                    timer.mode === 'pomodoro' ? 'Running' : 'Break';
                 new Notification(text);
             }
 
@@ -100,7 +98,7 @@ function updateClock() {
     sec.textContent = seconds;
 
     const text =
-        timer.mode === 'pomodoro' ? 'Get back to work!' : 'Take a break!';
+        timer.mode === 'pomodoro' ? 'Running!' : 'Break';
     document.title = `${minutes}:${seconds} — ${text}`;
 
     const progress = document.getElementById('js-progress');
